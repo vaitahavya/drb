@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DRB Infrastructure – Corporate Website
 
-## Getting Started
+Premium, lightweight corporate website for **DRB Infrastructure Pvt. Ltd.** — Indian infrastructure & road construction company.
 
-First, run the development server:
+## Tech stack
+
+- **Next.js 16** (App Router), **TypeScript**, **Tailwind CSS**
+- Static-first, SEO-friendly, Core Web Vitals–oriented
+- Design: Deep Navy / Steel Blue, Infra Red accent, Inter & Manrope
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build & deploy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+Deploy to **Vercel** or **Netlify** (recommended). All routes are statically generated.
 
-To learn more about Next.js, take a look at the following resources:
+## Site structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Route | Description |
+|-------|-------------|
+| `/` | Home — hero, snapshot, expertise, projects, vision/mission, leadership preview, CTA |
+| `/about` | Company journey, philosophy, vision, mission, values |
+| `/expertise` | Index + 5 sub-pages (Highway, EPC, High-Altitude, Irrigation, Maintenance) |
+| `/projects` | Project portfolio (filter UI can be added later) |
+| `/plant-machinery` | Equipment categories & capacity |
+| `/leadership` | Founder & Director profiles, governance |
+| `/careers` | Culture, safety, apply CTA |
+| `/contact` | Office, email, phone, contact form, map placeholder |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Next steps
 
-## Deploy on Vercel
+1. **Contact form** — Wire `/contact` form to your API or email service (e.g. Formspree, Resend, or custom API).
+2. **Content** — Replace placeholder office address and phone in `src/app/contact/page.tsx`; add real project photos and copy.
+3. **Map** — Add Google Maps (or similar) in the Contact page with your office coordinates.
+4. **Images** — Swap Unsplash hero/project images for your own; keep using `next/image` and the existing `remotePatterns` in `next.config.ts` for any external image domains.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Performance
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Static generation for all pages
+- Tailwind with minimal CSS
+- Optional: add `framer-motion` for subtle scroll/entrance animations (already in dependencies)

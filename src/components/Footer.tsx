@@ -1,0 +1,42 @@
+import Link from "next/link";
+
+export function Footer() {
+  return (
+    <footer className="bg-[var(--navy)] text-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <div className="grid gap-10 lg:grid-cols-4">
+          <div className="lg:col-span-2">
+            <p className="font-display text-xl font-semibold">DRB Infrastructure Pvt. Ltd.</p>
+            <p className="mt-2 text-sm text-white/80 max-w-md">
+              Planning, execution & maintenance. High-altitude roads, highways, irrigation, EPC projects. Pan-India presence.
+            </p>
+            <p className="mt-4 text-sm text-white/70 italic">No job too colossal. No job too minute.</p>
+          </div>
+          <div>
+            <h3 className="font-display font-semibold text-white">Quick links</h3>
+            <ul className="mt-4 space-y-2 text-sm text-white/80">
+              <li><Link href="/about" className="hover:text-white transition-colors">About DRB</Link></li>
+              <li><Link href="/expertise" className="hover:text-white transition-colors">Expertise</Link></li>
+              <li><Link href="/projects" className="hover:text-white transition-colors">Projects</Link></li>
+              <li><Link href="/plant-machinery" className="hover:text-white transition-colors">Plant & Machinery</Link></li>
+              <li><Link href="/leadership" className="hover:text-white transition-colors">Leadership</Link></li>
+              <li><Link href="/careers" className="hover:text-white transition-colors">Careers</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-display font-semibold text-white">Contact</h3>
+            <address className="mt-4 text-sm text-white/80 not-italic">
+              <Link href="/contact" className="hover:text-white transition-colors">
+                View contact details & map
+              </Link>
+            </address>
+          </div>
+        </div>
+        <div className="mt-12 pt-8 border-t border-white/20 text-sm text-white/60">
+          <p>© {new Date().getFullYear()} DRB Infrastructure Pvt. Ltd. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
