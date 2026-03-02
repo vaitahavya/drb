@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedItem } from "@/components/AnimatedItem";
 
@@ -8,6 +9,15 @@ export const metadata: Metadata = {
   description:
     "DRB Infrastructure projects—highways, expressways, mountain roads, irrigation. NHAI, NHIDCL, BRO, MoRTH, Bharatmala.",
 };
+
+const PROJECT_IMAGES = [
+  "/images/portfolio/hero-3.png",
+  "/images/portfolio/hero-4.png",
+  "/images/portfolio/hero-5.png",
+  "/images/portfolio/hero-1.png",
+  "/images/portfolio/hero-2.png",
+  "/images/portfolio/hero-3.png",
+];
 
 const projects = [
   { title: "NHAI Highway Package", region: "North India", authority: "NHAI", type: "Highway" },
@@ -34,17 +44,18 @@ export default function ProjectsPage() {
 
       <AnimatedSection variant="grey" stagger>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map(({ title, region, authority, type }) => (
+          {projects.map(({ title, region, authority, type }, i) => (
             <AnimatedItem key={title}>
-              <article className="rounded-lg overflow-hidden bg-white border border-[var(--grey-200)] hover:shadow-md transition-shadow">
-                <div
-                  className="aspect-video bg-[var(--grey-200)]"
-                  style={{
-                    backgroundImage: "url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                />
+              <article className="rounded-lg overflow-hidden bg-white border border-[var(--grey-200)] hover:shadow-md transition-shadow group">
+                <div className="aspect-video relative bg-[var(--grey-200)] overflow-hidden">
+                  <Image
+                    src={PROJECT_IMAGES[i]}
+                    alt=""
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
                 <div className="p-5">
                   <div className="flex flex-wrap gap-2 text-xs font-medium text-[var(--concrete)]">
                     <span>{type}</span>

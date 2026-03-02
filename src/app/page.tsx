@@ -1,9 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedItem } from "@/components/AnimatedItem";
 import { StaggerGrid } from "@/components/StaggerGrid";
 import { Button } from "@/components/Button";
 import { Hero } from "@/components/Hero";
+import { ConstructionStrength } from "@/components/ConstructionStrength";
 
 const snapshot = [
   { value: "17+", label: "Years operational" },
@@ -41,15 +43,16 @@ const expertiseHighlights = [
 ];
 
 const featuredProjects = [
-  { title: "NHAI Highway Project", region: "North India", href: "/projects" },
-  { title: "NHIDCL Mountain Road", region: "J&K", href: "/projects" },
-  { title: "BRO Strategic Road", region: "Arunachal Pradesh", href: "/projects" },
+  { title: "NHAI Highway Project", region: "North India", href: "/projects", image: "/images/portfolio/hero-3.png" },
+  { title: "NHIDCL Mountain Road", region: "J&K", href: "/projects", image: "/images/portfolio/hero-4.png" },
+  { title: "BRO Strategic Road", region: "Arunachal Pradesh", href: "/projects", image: "/images/portfolio/hero-5.png" },
 ];
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <ConstructionStrength />
 
       {/* Company snapshot */}
       <AnimatedSection variant="grey" stagger>
@@ -107,20 +110,21 @@ export default function Home() {
           Delivered for NHAI, NHIDCL, BRO and tier-1 EPC partners across India.
         </p>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {featuredProjects.map(({ title, region, href }) => (
+          {featuredProjects.map(({ title, region, href, image }) => (
             <AnimatedItem key={title}>
               <Link
                 href={href}
                 className="group block rounded-lg overflow-hidden border border-[var(--grey-200)] bg-white hover:shadow-lg transition-shadow"
               >
-                <div
-                  className="aspect-video bg-[var(--grey-200)]"
-                  style={{
-                    backgroundImage: "url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80')",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                />
+                <div className="aspect-video relative bg-[var(--grey-200)]">
+                  <Image
+                    src={image}
+                    alt=""
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
                 <div className="p-5">
                   <h3 className="font-display font-semibold text-[var(--navy)] group-hover:text-[var(--steel)]">
                     {title}

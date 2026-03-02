@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedItem } from "@/components/AnimatedItem";
 
@@ -123,6 +124,25 @@ export default function ContactPage() {
 
       <AnimatedSection>
         <h2 className="font-display text-xl font-semibold text-[var(--navy)]">
+          Our work
+        </h2>
+        <p className="mt-2 text-[var(--concrete)] max-w-2xl">
+          Building infrastructure across India—from highways to high-altitude roads.
+        </p>
+        <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+          {["/images/portfolio/hero-1.png", "/images/portfolio/hero-2.png", "/images/portfolio/hero-3.png", "/images/portfolio/hero-4.png", "/images/portfolio/hero-5.png"].map((src, i) => (
+            <div key={src} className="relative aspect-video rounded-lg overflow-hidden bg-[var(--grey-200)]">
+              <Image
+                src={src}
+                alt=""
+                fill
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                className="object-cover"
+              />
+            </div>
+          ))}
+        </div>
+        <h2 className="font-display text-xl font-semibold text-[var(--navy)] mt-12">
           Map
         </h2>
         <div className="mt-4 aspect-video max-w-4xl rounded-lg bg-[var(--grey-200)] flex items-center justify-center text-[var(--concrete)]">

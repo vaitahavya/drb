@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedItem } from "@/components/AnimatedItem";
 
@@ -19,12 +20,28 @@ export default function AboutPage() {
   return (
     <>
       <AnimatedSection className="pt-12">
-        <div className="max-w-3xl">
-          <h1 className="font-display text-4xl lg:text-5xl font-semibold text-[var(--navy)] tracking-tight">
-            About DRB Infrastructure
-          </h1>
-          <p className="mt-6 text-lg text-[var(--concrete)] leading-relaxed">
-            DRB Infrastructure Pvt. Ltd. is a leading Indian infrastructure and road construction company. Incorporated in 2008 and operational since 2011, we specialise in planning, execution and maintenance of highways, high-altitude roads, irrigation and EPC projects across India.
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative rounded-xl overflow-hidden aspect-[21/9] min-h-[200px] bg-[var(--grey-200)]">
+            <Image
+              src="/images/portfolio/hero-1.png"
+              alt="DRB construction site—heavy machinery at scale"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[var(--navy)]/80 via-transparent to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8 text-white">
+              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
+                About DRB Infrastructure
+              </h1>
+              <p className="mt-3 text-lg text-white/90 max-w-2xl">
+                Incorporated 2008 · Operational since 2011
+              </p>
+            </div>
+          </div>
+          <p className="mt-8 text-lg text-[var(--concrete)] leading-relaxed max-w-3xl">
+            DRB Infrastructure Pvt. Ltd. is a leading Indian infrastructure and road construction company. We specialise in planning, execution and maintenance of highways, high-altitude roads, irrigation and EPC projects across India.
           </p>
         </div>
       </AnimatedSection>

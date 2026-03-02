@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedItem } from "@/components/AnimatedItem";
 
@@ -31,11 +32,26 @@ export default function PlantMachineryPage() {
   return (
     <>
       <AnimatedSection className="pt-12">
-        <div className="max-w-3xl">
-          <h1 className="font-display text-4xl lg:text-5xl font-semibold text-[var(--navy)] tracking-tight">
-            Plant & Machinery
-          </h1>
-          <p className="mt-6 text-lg text-[var(--concrete)] leading-relaxed">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative rounded-xl overflow-hidden aspect-[21/9] min-h-[180px] bg-[var(--grey-200)]">
+            <Image
+              src="/images/portfolio/hero-1.png"
+              alt="DRB plant and machinery—excavators and earthmoving equipment on site"
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[var(--navy)]/70 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h1 className="font-display text-3xl lg:text-4xl font-semibold tracking-tight">
+                Plant & Machinery
+              </h1>
+              <p className="mt-2 text-white/90 max-w-2xl">
+                A large, modern fleet for highway, EPC and irrigation projects.
+              </p>
+            </div>
+          </div>
+          <p className="mt-8 text-lg text-[var(--concrete)] leading-relaxed max-w-3xl">
             We maintain a large, modern fleet to support highway, EPC and irrigation projects. Equipment is deployed across sites with emphasis on availability, maintenance and safety.
           </p>
         </div>
