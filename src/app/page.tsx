@@ -43,9 +43,9 @@ const expertiseHighlights = [
 ];
 
 const featuredProjects = [
-  { title: "NHAI Highway Project", region: "North India", href: "/projects", image: "/images/portfolio/hero-3.png" },
-  { title: "NHIDCL Mountain Road", region: "J&K", href: "/projects", image: "/images/portfolio/hero-4.png" },
-  { title: "BRO Strategic Road", region: "Arunachal Pradesh", href: "/projects", image: "/images/portfolio/hero-5.png" },
+  { title: "Arunachal Pradesh – BRO Project", region: "Arunachal Pradesh", href: "/projects", image: "/images/portfolio/hero-3.png" },
+  { title: "Arunachal Pradesh – NHAI Project", region: "Arunachal Pradesh", href: "/projects", image: "/images/portfolio/hero-4.png" },
+  { title: "Uttarakhand – BRO Project", region: "Uttarakhand", href: "/projects", image: "/images/portfolio/hero-5.png" },
 ];
 
 export default function Home() {

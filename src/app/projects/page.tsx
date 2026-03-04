@@ -20,12 +20,12 @@ const PROJECT_IMAGES = [
 ];
 
 const projects = [
-  { title: "NHAI Highway Package", region: "North India", authority: "NHAI", type: "Highway" },
-  { title: "NHIDCL Mountain Road", region: "J&K", authority: "NHIDCL", type: "Mountain" },
-  { title: "BRO Strategic Road", region: "Arunachal Pradesh", authority: "BRO", type: "Mountain" },
-  { title: "State Highway Upgradation", region: "Himachal Pradesh", authority: "State PWD", type: "Highway" },
-  { title: "Irrigation Canal Package", region: "Uttarakhand", authority: "State Irrigation", type: "Irrigation" },
-  { title: "Bharatmala Link Road", region: "Manipur", authority: "NHAI", type: "Expressway" },
+  { title: "Arunachal Pradesh – BRO Project", region: "Arunachal Pradesh", authority: "BRO", type: "Mountain" },
+  { title: "Arunachal Pradesh – NHAI Project", region: "Arunachal Pradesh", authority: "NHAI", type: "Highway" },
+  { title: "Uttarakhand – BRO Project", region: "Uttarakhand", authority: "BRO", type: "Mountain" },
+  { title: "Arunachal Pradesh – BRO Project", region: "Arunachal Pradesh", authority: "BRO", type: "Mountain" },
+  { title: "Arunachal Pradesh – NHAI Project", region: "Arunachal Pradesh", authority: "NHAI", type: "Highway" },
+  { title: "Uttarakhand – BRO Project", region: "Uttarakhand", authority: "BRO", type: "Mountain" },
 ];
 
 export default function ProjectsPage() {
@@ -45,7 +45,7 @@ export default function ProjectsPage() {
       <AnimatedSection variant="grey" stagger>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map(({ title, region, authority, type }, i) => (
-            <AnimatedItem key={title}>
+            <AnimatedItem key={`${region}-${authority}-${i}`}>
               <article className="rounded-lg overflow-hidden bg-white border border-[var(--grey-200)] hover:shadow-md transition-shadow group">
                 <div className="aspect-video relative bg-[var(--grey-200)] overflow-hidden">
                   <Image
