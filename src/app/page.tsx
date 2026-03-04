@@ -107,7 +107,7 @@ export default function Home() {
           Featured projects
         </h2>
         <p className="mt-4 text-lg text-[var(--concrete)] max-w-2xl">
-          Delivered for NHAI, NHIDCL, BRO and tier-1 EPC partners across India.
+          Delivered for NHAI, NHIDCL, BRO, MoRTH and tier-1 EPC partners across India.
         </p>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featuredProjects.map(({ title, region, href, image }) => (
