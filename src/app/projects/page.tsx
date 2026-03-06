@@ -10,22 +10,68 @@ export const metadata: Metadata = {
     "DRB Infrastructure projects—highways, expressways, mountain roads, irrigation. NHAI, NHIDCL, BRO, MoRTH, Bharatmala.",
 };
 
-const PROJECT_IMAGES = [
-  "/images/portfolio/hero-3.png",
-  "/images/portfolio/hero-4.png",
-  "/images/portfolio/hero-5.png",
-  "/images/portfolio/hero-1.png",
-  "/images/portfolio/hero-2.png",
-  "/images/portfolio/hero-3.png",
-];
-
-const projects = [
-  { title: "Arunachal Pradesh – BRO Project", region: "Arunachal Pradesh", authority: "BRO", type: "Mountain" },
-  { title: "Arunachal Pradesh – NHAI Project", region: "Arunachal Pradesh", authority: "NHAI", type: "Highway" },
-  { title: "Uttarakhand – BRO Project", region: "Uttarakhand", authority: "BRO", type: "Mountain" },
-  { title: "Arunachal Pradesh – BRO Project", region: "Arunachal Pradesh", authority: "BRO", type: "Mountain" },
-  { title: "Arunachal Pradesh – NHAI Project", region: "Arunachal Pradesh", authority: "NHAI", type: "Highway" },
-  { title: "Uttarakhand – BRO Project", region: "Uttarakhand", authority: "BRO", type: "Mountain" },
+const ONGOING_PROJECTS = [
+  {
+    id: "kiratpur-nh214-hp",
+    title: "Kiratpur to Ner-Chowk NH-214 Lane Road Work",
+    region: "Himachal Pradesh",
+    authority: "NHAI",
+    type: "Highway",
+    images: [
+      "/images/projects/kiratpur-nh214-hp-1.png",
+      "/images/projects/kiratpur-nh214-hp-2.png",
+    ],
+  },
+  {
+    id: "pakke-seijosa-itakhola",
+    title: "Pakke-Seijosa-Itakhola Road (62 km)",
+    region: "Arunachal Pradesh",
+    authority: "State / NHAI",
+    type: "Highway",
+    images: [
+      "/images/projects/pakke-seijosa-itakhola-arunachal-1.png",
+      "/images/projects/pakke-seijosa-itakhola-arunachal-2.png",
+      "/images/projects/pakke-seijosa-itakhola-arunachal-4.png",
+      "/images/projects/pakke-seijosa-itakhola-arunachal-13.png",
+    ],
+  },
+  {
+    id: "sella-pass-nh13-bro",
+    title: "Sella Pass Balipara-Charduar-Tawang Road NH13",
+    region: "Arunachal Pradesh",
+    authority: "BRO",
+    type: "Mountain",
+    images: [
+      "/images/projects/sella-pass-nh13-bro-arunachal-1.png",
+      "/images/projects/sella-pass-nh13-bro-arunachal-2.png",
+      "/images/projects/sella-pass-nh13-bro-arunachal-3.png",
+      "/images/projects/sella-pass-nh13-bro-arunachal-4.png",
+    ],
+  },
+  {
+    id: "trans-arunachal-nh229",
+    title: "Trans-Arunachal Highway NH-229",
+    region: "Arunachal Pradesh",
+    authority: "NHAI / MoRTH",
+    type: "Highway",
+    images: [
+      "/images/projects/trans-arunachal-nh229-1.png",
+      "/images/projects/trans-arunachal-nh229-2.png",
+    ],
+  },
+  {
+    id: "delhi-amritsar-katra-bharatmala",
+    title: "Delhi–Amritsar–Katra Expressway (Bharatmala Pariyojana)",
+    region: "Multi-state",
+    authority: "NHAI",
+    type: "Expressway",
+    images: [
+      "/images/projects/delhi-amritsar-katra-bharatmala-1.png",
+      "/images/projects/delhi-amritsar-katra-bharatmala-2.png",
+      "/images/projects/delhi-amritsar-katra-bharatmala-3.png",
+      "/images/projects/delhi-amritsar-katra-bharatmala-4.png",
+    ],
+  },
 ];
 
 export default function ProjectsPage() {
@@ -43,36 +89,47 @@ export default function ProjectsPage() {
       </AnimatedSection>
 
       <AnimatedSection variant="grey" stagger>
+        <div className="flex items-center gap-3 mb-8">
+          <h2 className="font-display text-2xl lg:text-3xl font-semibold text-[var(--navy)]">
+            Ongoing projects
+          </h2>
+          <span className="inline-flex items-center rounded-full bg-[var(--accent)]/15 px-3 py-1 text-xs font-semibold text-[var(--accent)]">
+            Ongoing
+          </span>
+        </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map(({ title, region, authority, type }, i) => (
-            <AnimatedItem key={`${region}-${authority}-${i}`}>
+          {ONGOING_PROJECTS.map((project) => (
+            <AnimatedItem key={project.id}>
               <article className="rounded-lg overflow-hidden bg-white border border-[var(--grey-200)] hover:shadow-md transition-shadow group">
-                <div className="aspect-video relative bg-[var(--grey-200)] overflow-hidden">
+                <div className="aspect-video relative bg-[var(--grey-200)] flex items-center justify-center">
                   <Image
-                    src={PROJECT_IMAGES[i]}
-                    alt=""
+                    src={project.images[0]}
+                    alt={`${project.title} — site view`}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="object-contain"
                   />
+                  <span className="absolute top-3 left-3 inline-flex items-center rounded-full bg-[var(--accent)] px-2.5 py-1 text-xs font-semibold text-white">
+                    Ongoing
+                  </span>
                 </div>
                 <div className="p-5">
                   <div className="flex flex-wrap gap-2 text-xs font-medium text-[var(--concrete)]">
-                    <span>{type}</span>
+                    <span>{project.type}</span>
                     <span>·</span>
-                    <span>{authority}</span>
+                    <span>{project.authority}</span>
                   </div>
                   <h2 className="font-display text-lg font-semibold text-[var(--navy)] mt-2">
-                    {title}
+                    {project.title}
                   </h2>
-                  <p className="mt-1 text-sm text-[var(--concrete)]">{region}</p>
+                  <p className="mt-1 text-sm text-[var(--concrete)]">{project.region}</p>
                 </div>
               </article>
             </AnimatedItem>
           ))}
         </div>
         <p className="mt-8 text-[var(--concrete)] text-center text-sm">
-          Filter by region, authority and type coming soon. For specific project enquiries,{" "}
+          For specific project enquiries,{" "}
           <Link href="/contact" className="text-[var(--steel)] font-medium hover:underline">
             contact us
           </Link>

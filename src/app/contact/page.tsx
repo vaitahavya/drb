@@ -32,20 +32,23 @@ export default function ContactPage() {
               </h2>
               <address className="mt-4 text-[var(--concrete)] not-italic leading-relaxed">
                 DRB Infrastructure Pvt. Ltd.<br />
-                [Office address to be updated]<br />
-                India
+                Plot No. 10, HIG Huda Enclave, Road No. 2,<br />
+                Banjara Hills, Hyderabad – 500034
               </address>
               <p className="mt-6">
-                <span className="font-medium text-[var(--navy)]">Email:</span>{" "}
-                <a href="mailto:info@drbinfrastructure.com" className="text-[var(--steel)] hover:underline">
-                  info@drbinfrastructure.com
+                <span className="font-medium text-[var(--navy)]">Landline:</span>{" "}
+                <a href="tel:+9104046035835" className="text-[var(--steel)] hover:underline">
+                  040-4603 5835
                 </a>
               </p>
               <p className="mt-2">
-                <span className="font-medium text-[var(--navy)]">Phone:</span>{" "}
-                <a href="tel:+91" className="text-[var(--steel)] hover:underline">
-                  [Phone to be updated]
+                <span className="font-medium text-[var(--navy)]">Email:</span>{" "}
+                <a href="mailto:info@drbipl.com" className="text-[var(--steel)] hover:underline">
+                  info@drbipl.com
                 </a>
+              </p>
+              <p className="mt-2 text-sm text-[var(--concrete)]">
+                <span className="font-medium text-[var(--navy)]">CIN:</span> U45400TG2008PTC062356
               </p>
             </div>
           </AnimatedItem>

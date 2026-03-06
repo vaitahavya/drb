@@ -26,15 +26,22 @@ export function Footer() {
           </div>
           <div>
             <h3 className="font-display font-semibold text-white">Contact</h3>
-            <address className="mt-4 text-sm text-white/80 not-italic">
-              <Link href="/contact" className="hover:text-white transition-colors">
-                View contact details & map
-              </Link>
+            <address className="mt-4 text-sm text-white/80 not-italic leading-relaxed">
+              Plot No. 10, HIG Huda Enclave, Road No. 2,<br />
+              Banjara Hills, Hyderabad – 500034<br />
+              <a href="tel:+9104046035835" className="hover:text-white transition-colors">040-4603 5835</a><br />
+              <a href="mailto:info@drbipl.com" className="hover:text-white transition-colors">info@drbipl.com</a>
             </address>
+            <p className="mt-2 text-xs text-white/60">CIN: U45400TG2008PTC062356</p>
+            <p className="mt-2">
+              <Link href="/contact" className="text-sm text-white/80 hover:text-white transition-colors">
+                View map & enquiry form →
+              </Link>
+            </p>
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-white/20 text-sm text-white/60">
-          <p>© {new Date().getFullYear()} DRB Infrastructure Pvt. Ltd. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} DRB Infrastructure Pvt. Ltd. (CIN: U45400TG2008PTC062356). All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -42,10 +42,12 @@ const expertiseHighlights = [
   },
 ];
 
-const featuredProjects = [
-  { title: "Arunachal Pradesh – BRO Project", region: "Arunachal Pradesh", href: "/projects", image: "/images/portfolio/hero-3.png" },
-  { title: "Arunachal Pradesh – NHAI Project", region: "Arunachal Pradesh", href: "/projects", image: "/images/portfolio/hero-4.png" },
-  { title: "Uttarakhand – BRO Project", region: "Uttarakhand", href: "/projects", image: "/images/portfolio/hero-5.png" },
+const ongoingProjects = [
+  { title: "Kiratpur to Ner-Chowk NH-214 Lane Road Work", region: "Himachal Pradesh", href: "/projects", image: "/images/projects/kiratpur-nh214-hp-1.png" },
+  { title: "Pakke-Seijosa-Itakhola Road (62 km)", region: "Arunachal Pradesh", href: "/projects", image: "/images/projects/pakke-seijosa-itakhola-arunachal-1.png" },
+  { title: "Sella Pass Balipara-Charduar-Tawang Road NH13", region: "Arunachal Pradesh (BRO)", href: "/projects", image: "/images/projects/sella-pass-nh13-bro-arunachal-1.png" },
+  { title: "Trans-Arunachal Highway NH-229", region: "Arunachal Pradesh", href: "/projects", image: "/images/projects/trans-arunachal-nh229-1.png" },
+  { title: "Delhi–Amritsar–Katra Expressway", region: "Bharatmala Pariyojana", href: "/projects", image: "/images/projects/delhi-amritsar-katra-bharatmala-1.png" },
 ];
 
 export default function Home() {
@@ -101,29 +103,37 @@ export default function Home() {
         </div>
       </AnimatedSection>
 
-      {/* Featured projects */}
+      {/* Ongoing projects */}
       <AnimatedSection variant="grey" stagger>
-        <h2 className="font-display text-3xl lg:text-4xl font-semibold text-[var(--navy)]">
-          Featured projects
-        </h2>
+        <div className="flex flex-wrap items-center gap-3">
+          <h2 className="font-display text-3xl lg:text-4xl font-semibold text-[var(--navy)]">
+            Ongoing projects
+          </h2>
+          <span className="inline-flex items-center rounded-full bg-[var(--accent)]/15 px-3 py-1 text-sm font-semibold text-[var(--accent)]">
+            Ongoing
+          </span>
+        </div>
         <p className="mt-4 text-lg text-[var(--concrete)] max-w-2xl">
           Delivered for NHAI, NHIDCL, BRO, MoRTH and tier-1 EPC partners across India.
         </p>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {featuredProjects.map(({ title, region, href, image }) => (
+          {ongoingProjects.map(({ title, region, href, image }) => (
             <AnimatedItem key={title}>
               <Link
                 href={href}
                 className="group block rounded-lg overflow-hidden border border-[var(--grey-200)] bg-white hover:shadow-lg transition-shadow"
               >
-                <div className="aspect-video relative bg-[var(--grey-200)]">
+                <div className="aspect-video relative bg-[var(--grey-200)] flex items-center justify-center">
                   <Image
                     src={image}
                     alt=""
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="object-contain transition-transform duration-300 group-hover:scale-105"
                   />
+                  <span className="absolute top-3 left-3 inline-flex items-center rounded-full bg-[var(--accent)] px-2.5 py-1 text-xs font-semibold text-white">
+                    Ongoing
+                  </span>
                 </div>
                 <div className="p-5">
                   <h3 className="font-display font-semibold text-[var(--navy)] group-hover:text-[var(--steel)]">
@@ -137,7 +147,7 @@ export default function Home() {
         </div>
         <div className="mt-10">
           <Button href="/projects" variant="outline">
-            View all projects
+            View all ongoing projects
           </Button>
         </div>
       </AnimatedSection>
