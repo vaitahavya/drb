@@ -43,11 +43,19 @@ const expertiseHighlights = [
 ];
 
 const ongoingProjects = [
-  { title: "Kiratpur to Ner-Chowk NH-214 Lane Road Work", region: "Himachal Pradesh", href: "/projects", image: "/images/projects/kiratpur-nh214-hp-1.png" },
-  { title: "Pakke-Seijosa-Itakhola Road (62 km)", region: "Arunachal Pradesh", href: "/projects", image: "/images/projects/pakke-seijosa-itakhola-arunachal-1.png" },
-  { title: "Sella Pass Balipara-Charduar-Tawang Road NH13", region: "Arunachal Pradesh (BRO)", href: "/projects", image: "/images/projects/sella-pass-nh13-bro-arunachal-1.png" },
-  { title: "Trans-Arunachal Highway NH-229", region: "Arunachal Pradesh", href: "/projects", image: "/images/projects/trans-arunachal-nh229-1.png" },
-  { title: "Delhi–Amritsar–Katra Expressway", region: "Bharatmala Pariyojana", href: "/projects", image: "/images/projects/delhi-amritsar-katra-bharatmala-1.png" },
+  { title: "MoRTH blackspot ID JK-02-005 at Barnoti & other blackspots on NH-44, UT of J&K (EPC)", region: "NHAI, Jammu", href: "/projects" },
+  { title: "4-Lane with Paved Shoulder: Jammu-Akhnoor road NH-144A, Ganesh Vihar to Khati Chowk (20.350 Km)", region: "NHIDCL, Jammu", href: "/projects" },
+];
+
+const completedProjects = [
+  { title: "Balipara-Charduar-Tawang Road NH13 for BRO", region: "Arunachal Pradesh", image: "/images/projects/sella-pass-nh13-bro-arunachal-1.png" },
+  { title: "Delhi Amritsar Katra Expressway under Bharatmala Pariyojna", region: "UT of J&K", image: "/images/projects/delhi-amritsar-katra-bharatmala-1.png" },
+  { title: "Pakke-Seijosa-Itakhola Road (62.0 Km)", region: "Arunachal Pradesh", image: "/images/projects/pakke-seijosa-itakhola-arunachal-1.png" },
+  { title: "Construction of Trans Arunachal Highway NH 229", region: "Arunachal Pradesh", image: "/images/projects/trans-arunachal-nh229-1.png" },
+  { title: "Construction of Imphal Kangchup-Tamenglong Road", region: "Manipur", image: "/images/portfolio/hero-2.png" },
+  { title: "Uttarakhand Helang Gabion Protection wall", region: "Uttarakhand", image: "/images/portfolio/hero-5.png" },
+  { title: "Kiratpur to Ner-chowk of NH-21", region: "Himachal Pradesh", image: "/images/projects/kiratpur-nh214-hp-1.png" },
+  { title: "Godavari Lift Irrigation Scheme (GLIS) & RVNL Railway work 3rd Lane", region: "—", image: "/images/portfolio/hero-3.png" },
 ];
 
 export default function Home() {
@@ -103,34 +111,28 @@ export default function Home() {
         </div>
       </AnimatedSection>
 
-      {/* Ongoing projects */}
+      {/* Key projects under execution */}
       <AnimatedSection variant="grey" stagger>
         <div className="flex flex-wrap items-center gap-3">
           <h2 className="font-display text-3xl lg:text-4xl font-semibold text-[var(--navy)]">
-            Ongoing projects
+            Key projects under execution
           </h2>
           <span className="inline-flex items-center rounded-full bg-[var(--accent)]/15 px-3 py-1 text-sm font-semibold text-[var(--accent)]">
             Ongoing
           </span>
         </div>
         <p className="mt-4 text-lg text-[var(--concrete)] max-w-2xl">
-          Delivered for NHAI, NHIDCL, BRO, MoRTH and tier-1 EPC partners across India.
+          We are currently providing our services for projects under NHAI and NHIDCL in the UT of J&K.
         </p>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {ongoingProjects.map(({ title, region, href, image }) => (
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          {ongoingProjects.map(({ title, region, href }) => (
             <AnimatedItem key={title}>
               <Link
                 href={href}
                 className="group block rounded-lg overflow-hidden border border-[var(--grey-200)] bg-white hover:shadow-lg transition-shadow"
               >
-                <div className="aspect-video relative bg-[var(--grey-200)] flex items-center justify-center">
-                  <Image
-                    src={image}
-                    alt=""
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-contain transition-transform duration-300 group-hover:scale-105"
-                  />
+                <div className="aspect-video relative bg-[var(--grey-100)] flex items-center justify-center">
+                  <span className="text-sm font-medium text-[var(--concrete)]">Under execution</span>
                   <span className="absolute top-3 left-3 inline-flex items-center rounded-full bg-[var(--accent)] px-2.5 py-1 text-xs font-semibold text-white">
                     Ongoing
                   </span>
@@ -145,9 +147,50 @@ export default function Home() {
             </AnimatedItem>
           ))}
         </div>
-        <div className="mt-10">
+        <div className="mt-10 flex flex-wrap gap-4">
           <Button href="/projects" variant="outline">
-            View all ongoing projects
+            View all projects
+          </Button>
+        </div>
+      </AnimatedSection>
+
+      {/* Major works completed */}
+      <AnimatedSection variant="grey" stagger>
+        <h2 className="font-display text-3xl lg:text-4xl font-semibold text-[var(--navy)]">
+          Major works completed
+        </h2>
+        <p className="mt-4 text-lg text-[var(--concrete)] max-w-2xl">
+          Our expertise services were provided in many successful constructions around India—BRO, NHAI, NHIDCL and tier-1 EPC partners.
+        </p>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {completedProjects.map(({ title, region, image }) => (
+            <AnimatedItem key={title}>
+              <Link
+                href="/projects#completed"
+                className="group block rounded-lg overflow-hidden border border-[var(--grey-200)] bg-white hover:shadow-lg transition-shadow"
+              >
+                <div className="aspect-video relative bg-[var(--grey-200)] flex items-center justify-center">
+                  <Image
+                    src={image}
+                    alt=""
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-contain transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-display font-semibold text-[var(--navy)] group-hover:text-[var(--steel)]">
+                    {title}
+                  </h3>
+                  <p className="mt-1 text-sm text-[var(--concrete)]">{region}</p>
+                </div>
+              </Link>
+            </AnimatedItem>
+          ))}
+        </div>
+        <div className="mt-10">
+          <Button href="/projects#completed" variant="outline">
+            View full list of major works completed
           </Button>
         </div>
       </AnimatedSection>

@@ -6,6 +6,7 @@ import { motion, useInView } from "framer-motion";
 interface AnimatedSectionProps {
   children: ReactNode;
   className?: string;
+  id?: string;
   /** Optional background: default | navy | grey */
   variant?: "default" | "navy" | "grey";
   /** Inner max-width wrapper */
@@ -35,6 +36,7 @@ const staggerContainerVariants = {
 export function AnimatedSection({
   children,
   className = "",
+  id,
   variant = "default",
   narrow = false,
   stagger = false,
@@ -53,7 +55,7 @@ export function AnimatedSection({
 
   if (isReduced) {
     return (
-      <section className={`py-16 lg:py-24 ${bg} ${className}`}>
+      <section id={id} className={`py-16 lg:py-24 ${bg} ${className}`}>
         <div className={`mx-auto px-4 sm:px-6 lg:px-8 ${narrow ? "max-w-4xl" : "max-w-7xl"}`}>
           {children}
         </div>
@@ -65,6 +67,7 @@ export function AnimatedSection({
 
   return (
     <motion.section
+      id={id}
       ref={ref}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
