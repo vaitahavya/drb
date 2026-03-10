@@ -48,9 +48,9 @@ export function Header() {
             <Image
               src="/images/logo.png"
               alt="DRB Infrastructure Pvt. Ltd."
-              width={120}
-              height={48}
-              className="h-10 w-auto object-contain lg:h-12"
+              width={280}
+              height={80}
+              className="h-16 w-auto object-contain lg:h-20"
               priority
             />
           </Link>

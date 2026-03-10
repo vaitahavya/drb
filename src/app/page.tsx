@@ -10,9 +10,9 @@ import { ConstructionStrength } from "@/components/ConstructionStrength";
 
 const snapshot = [
   { value: "17+", label: "Years operational" },
-  { value: "50+", label: "Projects executed" },
+  { value: "25+", label: "Projects" },
   { value: "5", label: "States" },
-  { value: "200+", label: "Machines" },
+  { value: "80+", label: "Machinery" },
 ];
 
 const expertiseHighlights = [
@@ -56,7 +56,7 @@ const completedProjects = [
   { title: "Construction of Imphal Kangchup-Tamenglong Road", region: "Manipur", image: "/images/portfolio/hero-2.png" },
   { title: "Uttarakhand Helang Gabion Protection wall", region: "Uttarakhand", image: "/images/portfolio/hero-5.png" },
   { title: "Kiratpur to Ner-chowk of NH-21", region: "Himachal Pradesh", image: "/images/projects/kiratpur-nh214-hp-1.png" },
-  { title: "Godavari Lift Irrigation Scheme (GLIS) & RVNL Railway work 3rd Lane", region: "—", image: "/images/portfolio/hero-3.png" },
+  { title: "BRO Road Construction Project, Arunachal Pradesh", region: "Arunachal Pradesh", image: "/images/portfolio/hero-3.png" },
 ];
 
 export const metadata: Metadata = {

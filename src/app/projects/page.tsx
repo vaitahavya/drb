@@ -85,10 +85,10 @@ const COMPLETED_PROJECTS = [
     image: "/images/projects/kiratpur-nh214-hp-1.png",
   },
   {
-    id: "godavari-glis-rvnl",
-    title: "Godavari Lift Irrigation Scheme (GLIS) & RVNL Railway work 3rd Lane",
-    region: "—",
-    principal: "Nagarjuna Construction Company Limited",
+    id: "bro-arunachal",
+    title: "BRO Road Construction Project, Arunachal Pradesh",
+    region: "Arunachal Pradesh",
+    principal: "Border Roads Organisation (BRO)",
     image: "/images/portfolio/hero-3.png",
   },
 ];
