@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -6,7 +7,16 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid gap-10 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <p className="font-display text-xl font-semibold">DRB Infrastructure Pvt. Ltd.</p>
+            <Link href="/" className="inline-flex items-center rounded-lg bg-white p-2">
+              <Image
+                src="/images/logo.png"
+                alt="DRB Infrastructure Pvt. Ltd."
+                width={140}
+                height={56}
+                className="h-10 w-auto object-contain lg:h-12"
+              />
+            </Link>
+            <p className="mt-4 font-display text-lg font-semibold text-white/90">DRB Infrastructure Pvt. Ltd.</p>
             <p className="mt-2 text-sm text-white/80 max-w-md">
               Planning, execution & maintenance. High-altitude roads, highways, irrigation, EPC projects. Pan-India presence.
             </p>

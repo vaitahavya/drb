@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -42,9 +43,16 @@ export function Header() {
         <div className="flex h-16 items-center justify-between lg:h-20">
           <Link
             href="/"
-            className="font-display text-xl font-semibold tracking-tight text-[var(--navy)]"
+            className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight text-[var(--navy)]"
           >
-            DRB Infrastructure
+            <Image
+              src="/images/logo.png"
+              alt="DRB Infrastructure Pvt. Ltd."
+              width={120}
+              height={48}
+              className="h-10 w-auto object-contain lg:h-12"
+              priority
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8" aria-label="Main">
