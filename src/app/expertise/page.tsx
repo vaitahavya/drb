@@ -8,6 +8,13 @@ export const metadata: Metadata = {
   title: "Expertise",
   description:
     "Highway & road construction, EPC projects, high-altitude roads, irrigation infrastructure, maintenance & asset management.",
+  openGraph: {
+    title: "Expertise | DRB Infrastructure",
+    description:
+      "Highway & road construction, EPC, high-altitude roads, irrigation, maintenance & asset management.",
+    url: "https://www.drbipl.com/expertise",
+  },
+  alternates: { canonical: "https://www.drbipl.com/expertise" },
 };
 
 const expertiseList = [

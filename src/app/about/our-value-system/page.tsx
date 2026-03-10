@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   title: "Our Value System",
   description:
     "DRB Infrastructure Pvt. Ltd. — incorporated 2008, operational since 2011. Our journey, philosophy, vision, mission and values.",
+  openGraph: {
+    title: "Our Value System | DRB Infrastructure",
+    description:
+      "DRB Infrastructure—journey, philosophy, vision, mission and values. Incorporated 2008.",
+    url: "https://www.drbipl.com/about/our-value-system",
+  },
+  alternates: { canonical: "https://www.drbipl.com/about/our-value-system" },
 };
 
 const values = [

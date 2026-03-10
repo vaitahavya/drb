@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -57,6 +58,19 @@ const completedProjects = [
   { title: "Kiratpur to Ner-chowk of NH-21", region: "Himachal Pradesh", image: "/images/projects/kiratpur-nh214-hp-1.png" },
   { title: "Godavari Lift Irrigation Scheme (GLIS) & RVNL Railway work 3rd Lane", region: "—", image: "/images/portfolio/hero-3.png" },
 ];
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "DRB Infrastructure Pvt. Ltd.—Indian infrastructure & road construction. High-altitude roads, highways, irrigation, EPC. Planning, execution & maintenance. No job too colossal. No job too minute.",
+  openGraph: {
+    title: "DRB Infrastructure Pvt. Ltd. | Roads, EPC & Infrastructure",
+    description:
+      "Leading Indian infrastructure & road construction company. High-altitude roads, highways, irrigation, EPC.",
+    url: "https://www.drbipl.com",
+  },
+  alternates: { canonical: "https://www.drbipl.com/" },
+};
 
 export default function Home() {
   return (

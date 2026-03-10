@@ -45,6 +45,15 @@ Deploy to **Vercel** or **Netlify** (recommended). All routes are statically gen
 3. **Map** — Add Google Maps (or similar) in the Contact page with your office coordinates.
 4. **Images** — Swap Unsplash hero/project images for your own; keep using `next/image` and the existing `remotePatterns` in `next.config.ts` for any external image domains.
 
+## SEO & Google indexing
+
+- **Sitemap:** [https://www.drbipl.com/sitemap.xml](https://www.drbipl.com/sitemap.xml) — submit in Google Search Console.
+- **Robots:** [https://www.drbipl.com/robots.txt](https://www.drbipl.com/robots.txt) — allows crawling and references the sitemap.
+- **Metadata:** Per-page titles, descriptions, Open Graph, Twitter cards, and canonical URLs.
+- **Redirect:** `/home` → `/` (301) so old or Google-indexed `/home` links work.
+
+**To get indexed by Google:** Add the property in [Google Search Console](https://search.google.com/search-console), verify (DNS or HTML tag), then submit the sitemap URL above. Use “URL Inspection” for important URLs to request indexing.
+
 ## Performance
 
 - Static generation for all pages

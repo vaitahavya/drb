@@ -16,7 +16,10 @@ const manrope = Manrope({
   display: "swap",
 });
 
+const SITE_URL = "https://www.drbipl.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "DRB Infrastructure Pvt. Ltd. | Roads, EPC & Infrastructure",
     template: "%s | DRB Infrastructure",
@@ -32,11 +35,46 @@ export const metadata: Metadata = {
     "NHIDCL",
     "BRO",
     "infrastructure",
+    "drbipl",
   ],
+  authors: [{ name: "DRB Infrastructure Pvt. Ltd." }],
+  creator: "DRB Infrastructure Pvt. Ltd.",
+  publisher: "DRB Infrastructure Pvt. Ltd.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   openGraph: {
     type: "website",
+    locale: "en_IN",
+    url: SITE_URL,
+    siteName: "DRB Infrastructure",
+    title: "DRB Infrastructure Pvt. Ltd. | Roads, EPC & Infrastructure",
+    description:
+      "Leading Indian infrastructure & road construction company. High-altitude roads, highways, irrigation, EPC. No job too colossal. No job too minute.",
+    images: [
+      {
+        url: "/images/hero/hero-1.png",
+        width: 1200,
+        height: 630,
+        alt: "DRB Infrastructure - Roads, EPC & Infrastructure",
+      },
+    ],
   },
-  robots: "index, follow",
+  twitter: {
+    card: "summary_large_image",
+    title: "DRB Infrastructure Pvt. Ltd. | Roads, EPC & Infrastructure",
+    description:
+      "Leading Indian infrastructure & road construction company. High-altitude roads, highways, irrigation, EPC.",
+  },
+  alternates: {
+    canonical: SITE_URL,
+  },
+  verification: {
+    // Add your Google Search Console verification code when you have it:
+    // google: "your-google-verification-code",
+  },
 };
 
 export default function RootLayout({
@@ -49,8 +87,9 @@ export default function RootLayout({
     "@type": "Organization",
     name: "DRB Infrastructure Pvt. Ltd.",
     description: "Indian infrastructure & road construction company. Planning, execution & maintenance. High-altitude roads, highways, irrigation, EPC.",
-    url: "https://drbinfrastructure.com",
+    url: SITE_URL,
     foundingDate: "2008",
+    logo: `${SITE_URL}/images/hero/hero-1.png`,
   };
 
   return (

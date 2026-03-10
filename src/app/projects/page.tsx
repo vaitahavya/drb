@@ -8,6 +8,13 @@ export const metadata: Metadata = {
   title: "Projects",
   description:
     "DRB Infrastructure projects—highways, expressways, mountain roads, irrigation. NHAI, NHIDCL, BRO, MoRTH, Bharatmala.",
+  openGraph: {
+    title: "Projects | DRB Infrastructure",
+    description:
+      "DRB Infrastructure project portfolio—highways, expressways, mountain roads, irrigation. NHAI, NHIDCL, BRO, Bharatmala.",
+    url: "https://www.drbipl.com/projects",
+  },
+  alternates: { canonical: "https://www.drbipl.com/projects" },
 };
 
 const ONGOING_PROJECTS = [

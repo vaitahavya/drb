@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   title: "Plant & Machinery",
   description:
     "DRB Infrastructure plant and machinery—earthmoving, compaction, paving and allied equipment. Capacity and execution strength.",
+  openGraph: {
+    title: "Plant & Machinery | DRB Infrastructure",
+    description:
+      "DRB Infrastructure plant and machinery—earthmoving, compaction, paving. Capacity and execution strength.",
+    url: "https://www.drbipl.com/plant-machinery",
+  },
+  alternates: { canonical: "https://www.drbipl.com/plant-machinery" },
 };
 
 const categories = [

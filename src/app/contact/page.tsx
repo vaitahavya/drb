@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Contact DRB Infrastructure Pvt. Ltd.—office address, email, phone. Get in touch for partnerships and project enquiries.",
+  openGraph: {
+    title: "Contact | DRB Infrastructure",
+    description:
+      "Contact DRB Infrastructure—office address, email, phone. Partnerships and project enquiries.",
+    url: "https://www.drbipl.com/contact",
+  },
+  alternates: { canonical: "https://www.drbipl.com/contact" },
 };
 
 export default function ContactPage() {

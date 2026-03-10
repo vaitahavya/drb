@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "Leadership",
   description:
     "DRB Infrastructure leadership—Mr. Ramesh Babu D (Founder & CMD), Mrs. Krupa Jyothi D (Co-Founder & Director). Governance and ethics.",
+  openGraph: {
+    title: "Leadership | DRB Infrastructure",
+    description:
+      "DRB Infrastructure leadership—Founder & CMD, Co-Founder & Director. Governance and ethics.",
+    url: "https://www.drbipl.com/leadership",
+  },
+  alternates: { canonical: "https://www.drbipl.com/leadership" },
 };
 
 const leaders = [
