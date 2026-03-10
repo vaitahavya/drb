@@ -43,10 +43,10 @@ export function Header() {
         <div className="flex h-16 items-center justify-between lg:h-20">
           <Link
             href="/"
-            className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight text-[var(--navy)]"
+            className="flex items-center rounded-lg bg-white px-2 py-1.5 font-display text-xl font-semibold tracking-tight text-[var(--navy)] shadow-sm border border-[var(--grey-200)]"
           >
             <Image
-              src="/images/logo.png"
+              src="/images/logo-white.png"
               alt="DRB Infrastructure Pvt. Ltd."
               width={280}
               height={80}

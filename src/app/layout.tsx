@@ -55,7 +55,7 @@ export const metadata: Metadata = {
       "Leading Indian infrastructure & road construction company. High-altitude roads, highways, irrigation, EPC. No job too colossal. No job too minute.",
     images: [
       {
-        url: "/images/logo.png",
+        url: "/images/logo-white.png",
         width: 1200,
         height: 630,
         alt: "DRB Infrastructure - Roads, EPC & Infrastructure",
@@ -72,8 +72,8 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   icons: {
-    icon: "/images/logo.png",
-    apple: "/images/logo.png",
+    icon: "/images/logo-white.png",
+    apple: "/images/logo-white.png",
   },
   verification: {
     // Add your Google Search Console verification code when you have it:
@@ -93,7 +93,7 @@ export default function RootLayout({
     description: "Indian infrastructure & road construction company. Planning, execution & maintenance. High-altitude roads, highways, irrigation, EPC.",
     url: SITE_URL,
     foundingDate: "2008",
-    logo: `${SITE_URL}/images/logo.png`,
+    logo: `${SITE_URL}/images/logo-white.png`,
   };
 
   return (

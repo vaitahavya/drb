@@ -162,7 +162,7 @@ export default function ProjectsPage() {
                     alt={`${project.title} — completed`}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-contain"
+                    className="object-cover"
                   />
                 </div>
                 <div className="p-5">

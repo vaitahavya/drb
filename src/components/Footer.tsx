@@ -9,7 +9,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="inline-flex items-center rounded-lg bg-white p-2">
               <Image
-                src="/images/logo.png"
+                src="/images/logo-white.png"
                 alt="DRB Infrastructure Pvt. Ltd."
                 width={140}
                 height={56}
