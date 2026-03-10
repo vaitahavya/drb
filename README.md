@@ -31,12 +31,11 @@ Deploy to **Vercel** or **Netlify** (recommended). All routes are statically gen
 | Route | Description |
 |-------|-------------|
 | `/` | Home — hero, snapshot, expertise, projects, vision/mission, leadership preview, CTA |
-| `/about` | Company journey, philosophy, vision, mission, values |
+| `/about`, `/about/our-value-system` | Our Value System — journey, philosophy, vision, mission, values |
 | `/expertise` | Index + 5 sub-pages (Highway, EPC, High-Altitude, Irrigation, Maintenance) |
 | `/projects` | Project portfolio (filter UI can be added later) |
 | `/plant-machinery` | Equipment categories & capacity |
 | `/leadership` | Founder & Director profiles, governance |
-| `/careers` | Culture, safety, apply CTA |
 | `/contact` | Office, email, phone, contact form, map placeholder |
 
 ## Next steps

@@ -24,104 +24,62 @@ export default function ContactPage() {
       </AnimatedSection>
 
       <AnimatedSection variant="grey" stagger>
-        <div className="grid gap-10 lg:grid-cols-2">
-          <AnimatedItem>
-            <div>
-              <h2 className="font-display text-xl font-semibold text-[var(--navy)]">
-                Office
-              </h2>
-              <address className="mt-4 text-[var(--concrete)] not-italic leading-relaxed">
-                DRB Infrastructure Pvt. Ltd.<br />
-                Plot No. 10, HIG Huda Enclave, Road No. 2,<br />
-                Banjara Hills, Hyderabad – 500034
-              </address>
-              <p className="mt-6">
-                <span className="font-medium text-[var(--navy)]">Landline:</span>{" "}
-                <a href="tel:+9104046035835" className="text-[var(--steel)] hover:underline">
-                  040-4603 5835
-                </a>
-              </p>
-              <p className="mt-2">
-                <span className="font-medium text-[var(--navy)]">Email:</span>{" "}
-                <a href="mailto:info@drbipl.com" className="text-[var(--steel)] hover:underline">
-                  info@drbipl.com
-                </a>
-              </p>
-              <p className="mt-2 text-sm text-[var(--concrete)]">
-                <span className="font-medium text-[var(--navy)]">CIN:</span> U45400TG2008PTC062356
-              </p>
-            </div>
-          </AnimatedItem>
-          <AnimatedItem>
-            <div>
-              <h2 className="font-display text-xl font-semibold text-[var(--navy)]">
-                Enquiry form
-              </h2>
-              <form
-                action="#"
-                method="post"
-                className="mt-4 space-y-4"
-                aria-label="Contact form"
-              >
+        <div className="max-w-2xl">
+          <div className="rounded-2xl border border-[var(--grey-200)] bg-white shadow-sm overflow-hidden">
+            <div className="p-8 lg:p-10 space-y-8">
+              <AnimatedItem>
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-[var(--navy)]">
-                    Name
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    className="mt-1 block w-full rounded border border-[var(--grey-300)] bg-white px-4 py-2 text-[var(--foreground)] focus:border-[var(--steel)] focus:ring-1 focus:ring-[var(--steel)]"
-                  />
+                  <p className="text-xs font-semibold uppercase tracking-wider text-[var(--steel)]">
+                    Office
+                  </p>
+                  <p className="font-display text-lg font-semibold text-[var(--navy)] mt-1">
+                    DRB Infrastructure Pvt. Ltd.
+                  </p>
+                  <address className="mt-3 text-[var(--concrete)] not-italic leading-relaxed">
+                    Plot No. 10, HIG Huda Enclave, Road No. 2,<br />
+                    Banjara Hills, Hyderabad – 500034
+                  </address>
                 </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-[var(--navy)]">
+              </AnimatedItem>
+              <div className="h-px bg-[var(--grey-200)]" aria-hidden />
+              <AnimatedItem>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-[var(--steel)] w-20 shrink-0">
+                    Landline
+                  </p>
+                  <a
+                    href="tel:+9104046035835"
+                    className="text-lg text-[var(--navy)] font-medium hover:text-[var(--accent)] transition-colors"
+                  >
+                    040-4603 5835
+                  </a>
+                </div>
+              </AnimatedItem>
+              <div className="h-px bg-[var(--grey-200)]" aria-hidden />
+              <AnimatedItem>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-[var(--steel)] w-20 shrink-0">
                     Email
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    className="mt-1 block w-full rounded border border-[var(--grey-300)] bg-white px-4 py-2 text-[var(--foreground)] focus:border-[var(--steel)] focus:ring-1 focus:ring-[var(--steel)]"
-                  />
+                  </p>
+                  <a
+                    href="mailto:info@drbipl.com"
+                    className="text-lg text-[var(--navy)] font-medium hover:text-[var(--accent)] transition-colors break-all"
+                  >
+                    info@drbipl.com
+                  </a>
                 </div>
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-[var(--navy)]">
-                    Subject
-                  </label>
-                  <input
-                    id="subject"
-                    name="subject"
-                    type="text"
-                    className="mt-1 block w-full rounded border border-[var(--grey-300)] bg-white px-4 py-2 text-[var(--foreground)] focus:border-[var(--steel)] focus:ring-1 focus:ring-[var(--steel)]"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-[var(--navy)]">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    required
-                    className="mt-1 block w-full rounded border border-[var(--grey-300)] bg-white px-4 py-2 text-[var(--foreground)] focus:border-[var(--steel)] focus:ring-1 focus:ring-[var(--steel)]"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="inline-flex items-center justify-center font-medium px-6 py-3 rounded bg-[var(--accent)] text-white hover:bg-[var(--accent-hover)] transition-colors"
-                >
-                  Send message
-                </button>
-              </form>
-              <p className="mt-4 text-sm text-[var(--concrete)]">
-                Form submission can be wired to your email or API. Backend integration is left for you to add.
-              </p>
+              </AnimatedItem>
+              <div className="h-px bg-[var(--grey-200)]" aria-hidden />
+              <AnimatedItem>
+                <p className="text-xs font-semibold uppercase tracking-wider text-[var(--steel)]">
+                  CIN
+                </p>
+                <p className="mt-1 text-[var(--concrete)] font-mono text-sm">
+                  U45400TG2008PTC062356
+                </p>
+              </AnimatedItem>
             </div>
-          </AnimatedItem>
+          </div>
         </div>
       </AnimatedSection>
 
@@ -144,12 +102,6 @@ export default function ContactPage() {
               />
             </div>
           ))}
-        </div>
-        <h2 className="font-display text-xl font-semibold text-[var(--navy)] mt-12">
-          Map
-        </h2>
-        <div className="mt-4 aspect-video max-w-4xl rounded-lg bg-[var(--grey-200)] flex items-center justify-center text-[var(--concrete)]">
-          Map placeholder — integrate Google Maps or similar with your office coordinates.
         </div>
       </AnimatedSection>
     </>

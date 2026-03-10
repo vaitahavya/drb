@@ -6,7 +6,15 @@ import { useState } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About DRB" },
+  {
+    href: "/about",
+    label: "About",
+    children: [
+      { href: "/about/our-value-system", label: "Our Value System" },
+      { href: "/leadership", label: "Leadership" },
+      { href: "/DRB-PROFILE.pdf", label: "Download Profile", external: true },
+    ],
+  },
   {
     href: "/expertise",
     label: "Expertise",
@@ -20,15 +28,13 @@ const navLinks = [
   },
   { href: "/projects", label: "Projects" },
   { href: "/plant-machinery", label: "Plant & Machinery" },
-  { href: "/leadership", label: "Leadership" },
-  { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact" },
 ];
 
 export function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [expertiseOpen, setExpertiseOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-[var(--grey-200)]">
@@ -47,29 +53,41 @@ export function Header() {
                 <div
                   key={item.href}
                   className="relative group"
-                  onMouseEnter={() => setExpertiseOpen(true)}
-                  onMouseLeave={() => setExpertiseOpen(false)}
+                  onMouseEnter={() => setOpenDropdown(item.href)}
+                  onMouseLeave={() => setOpenDropdown(null)}
                 >
                   <button
                     type="button"
                     className="text-[var(--concrete)] hover:text-[var(--navy)] font-medium transition-colors py-2"
-                    aria-expanded={expertiseOpen}
+                    aria-expanded={openDropdown === item.href}
                     aria-haspopup="true"
                   >
                     {item.label}
                   </button>
-                  {expertiseOpen && (
+                  {openDropdown === item.href && (
                     <div className="absolute top-full left-0 pt-1 w-56">
                       <div className="bg-white rounded border border-[var(--grey-200)] shadow-lg py-2">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className="block px-4 py-2 text-sm text-[var(--concrete)] hover:bg-[var(--grey-50)] hover:text-[var(--navy)]"
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
+                        {item.children.map((child) =>
+                          "external" in child && child.external ? (
+                            <a
+                              key={child.href}
+                              href={child.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block px-4 py-2 text-sm text-[var(--concrete)] hover:bg-[var(--grey-50)] hover:text-[var(--navy)]"
+                            >
+                              {child.label}
+                            </a>
+                          ) : (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              className="block px-4 py-2 text-sm text-[var(--concrete)] hover:bg-[var(--grey-50)] hover:text-[var(--navy)]"
+                            >
+                              {child.label}
+                            </Link>
+                          )
+                        )}
                       </div>
                     </div>
                   )}
@@ -114,16 +132,29 @@ export function Header() {
                 item.children ? (
                   <div key={item.href}>
                     <span className="block px-4 py-2 font-medium text-[var(--navy)]">{item.label}</span>
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={child.href}
-                        onClick={() => setMobileOpen(false)}
-                        className="block py-2 pl-8 pr-4 text-[var(--concrete)] hover:bg-[var(--grey-50)]"
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
+                    {item.children.map((child) =>
+                      "external" in child && child.external ? (
+                        <a
+                          key={child.href}
+                          href={child.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setMobileOpen(false)}
+                          className="block py-2 pl-8 pr-4 text-[var(--concrete)] hover:bg-[var(--grey-50)]"
+                        >
+                          {child.label}
+                        </a>
+                      ) : (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          onClick={() => setMobileOpen(false)}
+                          className="block py-2 pl-8 pr-4 text-[var(--concrete)] hover:bg-[var(--grey-50)]"
+                        >
+                          {child.label}
+                        </Link>
+                      )
+                    )}
                   </div>
                 ) : (
                   <Link

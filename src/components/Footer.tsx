@@ -15,12 +15,12 @@ export function Footer() {
           <div>
             <h3 className="font-display font-semibold text-white">Quick links</h3>
             <ul className="mt-4 space-y-2 text-sm text-white/80">
-              <li><Link href="/about" className="hover:text-white transition-colors">About DRB</Link></li>
+              <li><Link href="/about/our-value-system" className="hover:text-white transition-colors">Our Value System</Link></li>
               <li><Link href="/expertise" className="hover:text-white transition-colors">Expertise</Link></li>
               <li><Link href="/projects" className="hover:text-white transition-colors">Projects</Link></li>
               <li><Link href="/plant-machinery" className="hover:text-white transition-colors">Plant & Machinery</Link></li>
               <li><Link href="/leadership" className="hover:text-white transition-colors">Leadership</Link></li>
-              <li><Link href="/careers" className="hover:text-white transition-colors">Careers</Link></li>
+              <li><a href="/DRB-PROFILE.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Download Profile</a></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>

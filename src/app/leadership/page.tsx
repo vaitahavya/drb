@@ -40,7 +40,6 @@ export default function LeadershipPage() {
           {leaders.map(({ name, role, bio }) => (
             <AnimatedItem key={name}>
               <div className="rounded-lg border border-[var(--grey-200)] bg-white p-8">
-                <div className="aspect-square max-w-xs rounded-lg bg-[var(--grey-200)] mb-6" />
                 <h2 className="font-display text-2xl font-semibold text-[var(--navy)]">
                   {name}
                 </h2>
